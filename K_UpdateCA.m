@@ -1,8 +1,5 @@
 function [CAobj,CAdec,CAvar] = K_UpdateCA(CAobj,CAdec,CAvar,MaxSize)
-% [CAobj,CAdec] = UpdateCA_GP(CAobj,CAdec,OffspringDec,OffspringObj,Maxsize);
 % Update CA
-
-
 
     N  = size(CAobj,1);
     if N <= MaxSize
