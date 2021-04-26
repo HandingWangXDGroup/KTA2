@@ -27,3 +27,8 @@ phi  ---  0.1 --- Number of randomly selected individuals
 This code is written by Zhenshou Song.
 
 Email: zssong@stu.xidian.edu.cn
+
+
+Acknowledgements on the Platform*
+
+*Ye Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform for evolutionary multi-objective optimization [educational forum], IEEE Computational Intelligence Magazine, 2017, 12(4): 73-87
