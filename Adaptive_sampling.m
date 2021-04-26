@@ -24,7 +24,7 @@ if flag == 1
     end
     Offspring01 = CAdec(Choose,:);
 else
-    if PD(DAobj,[]) < PD(DA.objs,[])
+    if PD(DAobj,[]) < PD(DA.obj,[])
         % uncertainty sampling strategy
         An = size(DAvar,1);
         Choose = zeros(1,5);
@@ -37,10 +37,10 @@ else
         Offspring01 = DAdec(Choose ,:);
     else
         % diversity sampling strategy
-        DA_Nor = (DA.objs - repmat(min([DAobj;DA.objs],[],1),length(DA),1))...
-            ./repmat(max([DAobj;DA.objs],[],1) - min([DAobj;DA.objs],[],1),length(DA),1);
-        DA_Nor_pre = (DAobj - repmat(min([DAobj;DA.objs],[],1),size(DAobj,1),1))...
-            ./repmat(max([DAobj;DA.objs],[],1) - min([DAobj;DA.objs],[],1),size(DAobj,1),1);
+        DA_Nor = (DA.objs - repmat(min([DAobj;DA.obj],[],1),length(DA),1))...
+            ./repmat(max([DAobj;DA.obj],[],1) - min([DAobj;DA.obj],[],1),length(DA),1);
+        DA_Nor_pre = (DAobj - repmat(min([DAobj;DA.obj],[],1),size(DAobj,1),1))...
+            ./repmat(max([DAobj;DA.obj],[],1) - min([DAobj;DA.obj],[],1),size(DAobj,1),1);
         N  = size(DA_Nor,1);
         Pop = [DA_Nor;DA_Nor_pre];
         Pop_dec = [DA.decs;DAdec];
